@@ -1,7 +1,14 @@
 <Solution>
-  <Project Path="WalletApp.Api/WalletApp.Api.csproj" />
-  <Project Path="WalletApp.Application/WalletApp.Application.csproj" />
-  <Project Path="WalletApp.Domain.Tests/WalletApp.Domain.Tests.csproj" />
-  <Project Path="WalletApp.Domain/WalletApp.Domain.csproj" />
-  <Project Path="WalletApp.Infrastructure/WalletApp.Infrastructure.csproj" />
+  <Folder Name="/Backend/">
+    <Project Path="WalletApp.Api/WalletApp.Api.csproj" />
+    <Project Path="WalletApp.Application/WalletApp.Application.csproj" />
+    <Project Path="WalletApp.Domain/WalletApp.Domain.csproj" />
+    <Project Path="WalletApp.Infrastructure/WalletApp.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/Elementos de la solución/">
+    <File Path="docker-compose.yml" />
+  </Folder>
+  <Folder Name="/Tests/">
+    <Project Path="WalletApp.Domain.Tests/WalletApp.Domain.Tests.csproj" />
+  </Folder>
 </Solution>
