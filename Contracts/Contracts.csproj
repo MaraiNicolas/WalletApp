@@ -8,8 +8,8 @@
 
   <ItemGroup>
     <Folder Include="Enumeraciones\" />
-    <Folder Include="Response\" />
-    <Folder Include="Request\" />
+    <Folder Include="Request\TransaccionTipos\" />
+    <Folder Include="Response\TransaccionTipos\" />
   </ItemGroup>
 
 </Project>

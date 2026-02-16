@@ -12,7 +12,7 @@ namespace WalletApp.Domain.Entities
             
         }
         #region Atributos
-        public string Descripcion { get; set; }
+        public string Descripcion { get; private set; }
         #endregion
     }
 }

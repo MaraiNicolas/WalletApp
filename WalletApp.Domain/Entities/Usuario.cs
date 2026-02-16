@@ -13,12 +13,12 @@ namespace WalletApp.Domain.Entities
             this.FechaAlta = DateTime.Now;
         }
         #region Atributos
-        public Guid Guid { get; set; }
-        public string Nombre { get; set; }
-        public string Apellido { get; set; }
-        public string NumeroDoc { get; set; }
-        public string Email { get; set; }
-        public string Password { get; set; }
+        public Guid Guid { get; private set; }
+        public string Nombre { get; private set; }
+        public string Apellido { get; private set; }
+        public string NumeroDoc { get; private set; }
+        public string Email { get; private set; }
+        public string Password { get; private set; }
         #endregion
         #region Metodos
         public static Usuario Create(string nombre, string apellido, string numeroDoc, string email, string password)

@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace WalletApp.Domain.Abstracciones.CQRSPatron
+namespace WalletApp.Application.Abstracciones.CQRSPatron
 {
     public interface IQuery
     {
