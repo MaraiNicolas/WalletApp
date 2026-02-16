@@ -5,7 +5,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Contracts\Contracts.csproj" />
     <ProjectReference Include="..\WalletApp.Domain\WalletApp.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Funcionalidades\Command\" />
+    <Folder Include="Funcionalidades\Query\" />
   </ItemGroup>
 
   <PropertyGroup>
