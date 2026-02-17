@@ -1,6 +1,6 @@
 ﻿using System.Data;
 using Microsoft.Data.SqlClient;
-using WalletApp.Domain.Abstracciones.SqlConnection;
+using WalletApp.Domain.Core.Abstracciones.SqlConnection;
 
 namespace WalletApp.Infrastructure.Contexto.SqlConecction;
 

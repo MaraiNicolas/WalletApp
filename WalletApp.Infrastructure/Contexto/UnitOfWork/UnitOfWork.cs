@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using WalletApp.Domain.Abstracciones.UnitOfWork;
+using WalletApp.Domain.Core.Abstracciones.UnitOfWork;
 
 namespace WalletApp.Infrastructure.Contexto.UnitOfWork
 {
@@ -14,7 +14,7 @@ namespace WalletApp.Infrastructure.Contexto.UnitOfWork
             _context = context;
         }
 
-        public async Task SaveChangesAsync(CancellationToken cancellationToken)
+        public async Task SaveChangesAsync(CancellationToken cancellationToken = default)
         {
             await _context.SaveChangesAsync(cancellationToken);
         }

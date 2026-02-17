@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using WalletApp.Domain.Entities.NewFolder;
+using WalletApp.Domain.Core.Primitivos;
 
 namespace WalletApp.Domain.Entities
 {

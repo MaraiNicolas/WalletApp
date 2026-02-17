@@ -1,4 +1,4 @@
-﻿using WalletApp.Domain.Entities.NewFolder;
+﻿using WalletApp.Domain.Core.Primitivos;
 
 namespace WalletApp.Domain.Entities
 {

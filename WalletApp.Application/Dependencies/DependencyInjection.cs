@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using WalletApp.Application.Configuraciones.Assemblies;
 
 namespace WalletApp.Application.Dependencies
 {
@@ -9,7 +10,10 @@ namespace WalletApp.Application.Dependencies
             services.AddMediatR(configuration =>
             {
                 configuration.RegisterServicesFromAssembly(typeof(DependencyInjection).Assembly);
+                configuration.RegisterServicesFromAssembly(AplicationAssembly.GetAssembly());
             });
+
+            services.AddAutoMapper(config => { }, AplicationAssembly.GetAssembly());
 
             return services;
         }

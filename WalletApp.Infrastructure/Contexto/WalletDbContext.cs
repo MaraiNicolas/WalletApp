@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Reflection;
-using WalletApp.Domain.Entities.NewFolder;
+using WalletApp.Domain.Core.Primitivos;
 
 namespace WalletApp.Infrastructure.Contexto
 {
