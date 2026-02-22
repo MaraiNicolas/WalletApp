@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using WalletApp.Domain.Core.Abstracciones.UnitOfWork;
+﻿using WalletApp.Domain.Core.Abstracciones.UnitOfWork;
 
 namespace WalletApp.Infrastructure.Contexto.UnitOfWork
 {

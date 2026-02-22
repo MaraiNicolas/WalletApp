@@ -15,7 +15,7 @@ namespace WalletApp.Application.Funcionalidades.Command.Usuarios
 
         public async Task<Result> Handle(UsuarioNuevoCommand request, CancellationToken cancellationToken)
         {
-            await _unitOfWork.SaveChangesAsync();
+            //await _unitOfWork.SaveChangesAsync();
             return Result.Success();
         }
     }
