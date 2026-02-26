@@ -26,10 +26,10 @@ namespace WalletApp.Domain.Core.Primitivos.Result
 
         public static Result Success() => new Result(true, Error.None);
 
-        public static Result<TValue> Sucess<TValue>(TValue value) => new Result<TValue>(value, true, Error.None); 
+        public static Result<TValue> Success<TValue>(TValue value) => new Result<TValue>(value, true, Error.None); 
 
         public static Result<TValue> Create<TValue>(TValue value, Error error) where TValue : class
-            => value is null ? Failure<TValue>(error) : Sucess(value);
+            => value is null ? Failure<TValue>(error) : Success(value);
 
         public static Result Failure(Error error) => new Result(false, error);
 
@@ -56,7 +56,7 @@ namespace WalletApp.Domain.Core.Primitivos.Result
         }
 
         
-        public static implicit operator Result<TValue>(TValue value) => Sucess(value);
+        public static implicit operator Result<TValue>(TValue value) => Success(value);
 
         public TValue Value => IsSuccess ? _value : throw new InvalidOperationException("El valor de un resultado erroneo no puede ser accedido.");
     }   

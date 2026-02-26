@@ -1,5 +1,4 @@
 ﻿using Contracts.Request.Usuarios;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using WalletApp.Api.Infraestructura;
 using WalletApp.Application.Funcionalidades.Command.Usuarios;
@@ -13,12 +12,25 @@ namespace WalletApp.Api.Controllers
     public class UsuarioController : BaseController
     {
         [HttpPost]
-        [AllowAnonymous]
-        public async Task<IActionResult> CrearUsuario([FromBody] UsuarioNuevoRequest request)
-            => await Result.Create(request, new Error("",""))
+
+        public async Task<IActionResult> Nuevo([FromBody] UsuarioNuevoRequest request)
+            => await Result.Create(request, new Error("", ""))
                         .Map(request => new UsuarioNuevoCommand(request))
                         .Bind(command => Mediator.Send(command))
-                        .Match(Ok, NotFound);
-        
+                        .Match(Ok, BadRequest);
+
+        [HttpPut]
+        public async Task<IActionResult> Modificar([FromBody] UsuarioModificarRequest request)
+            => await Result.Create(request, new Error("", ""))
+                         .Map(request => new UsuarioModificarCommand(request))
+                         .Bind(command => Mediator.Send(command))
+                         .Match(Ok, BadRequest);
+
+        [HttpDelete]
+        public async Task<IActionResult> Eliminar([FromQuery] UsuarioEliminarRequest request)
+            => await Result.Create(request, new Error("", ""))
+                         .Map(request => new UsuarioEliminarCommand(request))
+                         .Bind(command => Mediator.Send(command))
+                         .Match(Ok, BadRequest);
     }
 }

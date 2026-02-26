@@ -31,6 +31,14 @@ namespace WalletApp.Domain.Entities
             rNew.Password = password;
             return rNew;
         }
+
+        public void Actualizar(string nombre, string apellido, string numeroDoc, string email)
+        {
+            this.Nombre = nombre;
+            this.Apellido = apellido;
+            this.NumeroDoc = numeroDoc;
+            this.Email = email;
+        }
         #endregion
     }
 }
